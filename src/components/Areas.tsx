@@ -1,4 +1,5 @@
 import { areas } from "../content/site";
+import { BrandStrip } from "./BrandStrip";
 
 const [garments, sourcing, vanber, brands] = areas.items;
 
@@ -29,6 +30,7 @@ export function Areas() {
           </article>
         </div>
       </div>
+      <BrandStrip />
     </section>
   );
 }

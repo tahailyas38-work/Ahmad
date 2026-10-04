@@ -52,12 +52,6 @@ export const hero = {
     height: 979,
   } satisfies Photo,
   cta: "Let's Connect",
-  metrics: [
-    { value: "8", label: "Businesses" },
-    { value: "4", label: "Areas of work" },
-    { value: "3", label: "Consumer brands" },
-    { value: "2022", label: "Where it started" },
-  ],
 };
 
 /** Official venture marks along the bottom of the hero. Heights keep them visually even. */
@@ -73,6 +67,15 @@ export const brands = [
   { name: "Protect It", href: "https://www.protectit.pk/" },
   { name: "Pause It", href: "https://pauseit.pk/" },
   { name: "AFJA Trading", href: "https://www.afjatrading.com/" },
+] as const;
+
+export const brandMarks = [
+  { name: "AFJA Trading", src: "/logos/afja.svg", href: "https://www.afjatrading.com/" },
+  { name: "F&A Sourcing", src: "/logos/fa.svg" },
+  { name: "Van‑ber", src: "/logos/vanber.svg", scale: 1.7 },
+  { name: "Direct AJ Sourcing", src: "/logos/aj.svg", scale: 1.85 },
+  { name: "The Bare Edit", src: "/logos/bare-edit.svg", href: "https://www.thebareedit.pk/", scale: 1.22 },
+  { name: "Pause It", src: "/logos/pause-it.svg", href: "https://pauseit.pk/", scale: 0.74 },
 ] as const;
 
 export const about = {
@@ -100,7 +103,7 @@ export const areas = {
       line: "Products from China, for wherever people need them.",
     },
     {
-      title: "Van-ber",
+      title: "Van‑ber",
       line: "A way around Hong Kong when local transport leaves a gap.",
     },
     {
@@ -142,7 +145,7 @@ export const ventures = {
       summary: "Garments manufacturing and apparel sourcing.",
     },
     {
-      name: "Van-ber",
+      name: "Van‑ber",
       role: "Founder",
       year: "2025",
       summary:
@@ -181,7 +184,7 @@ export const ventures = {
 
 export const journey = {
   heading: "The Journey",
-  line: "From manufacturing and sourcing, through Van-ber, into new brands.",
+  line: "From manufacturing and sourcing, through Van‑ber, into new brands.",
   chapters: [
     {
       index: "01",
@@ -203,7 +206,7 @@ export const journey = {
       title: "Exploring Technology",
       body: [
         { text: "I later explored technology through " },
-        { text: "Van-ber", emphasis: true },
+        { text: "Van‑ber", emphasis: true },
         {
           text: ", developing an app around a gap in local transportation in Hong Kong.",
         },
@@ -236,13 +239,12 @@ export const milestones = {
   heading: "Recognition & Milestones",
   line: "Selected for CUPP, and the Grand Award for Mascot Design.",
   cupp: {
-    title: "CUPP",
-    programme: "Cyberport University Partnership Programme",
+    title: "Cyberport University Partnership Programme",
     meta: "Selected · Hong Kong → London",
-    body: "I was selected from companies across Hong Kong to participate in CUPP, travelling to London for the bootcamp and presenting Van-ber to investors.",
+    body: "I was selected from companies across Hong Kong to participate in CUPP, travelling to London for the bootcamp and presenting Van‑ber to investors.",
     image: {
       src: "/images/gallery/09-vanber-front.webp",
-      alt: "Ahmad Amir presenting Van-ber at CUPP.",
+      alt: "Ahmad Amir presenting Van‑ber at CUPP.",
       width: 1024,
       height: 768,
     } satisfies Photo,
@@ -262,7 +264,7 @@ export const milestones = {
 
 export const gallery = {
   heading: "Gallery",
-  line: "Photographs from CUPP, Van-ber, and the mascot award.",
+  line: "Photographs from CUPP, Van‑ber, and the mascot award.",
   cards: [
     {
       src: "/images/gallery/17-stage.webp",
@@ -284,12 +286,12 @@ export const gallery = {
     },
     {
       src: "/images/gallery/14-vanber-slide.webp",
-      alt: "Ahmad Amir presenting the Van-ber passenger screen.",
+      alt: "Ahmad Amir presenting the Van‑ber passenger screen.",
       width: 1024,
       height: 768,
       position: "18% 58%",
-      title: "Presenting Van-ber",
-      detail: "Walking through Van-ber in a CUPP session.",
+      title: "Presenting Van‑ber",
+      detail: "Walking through Van‑ber in a CUPP session.",
     },
     {
       src: "/images/gallery/08-mascot-award.webp",
@@ -301,12 +303,12 @@ export const gallery = {
     },
     {
       src: "/images/gallery/07-vanber-team.webp",
-      alt: "Ahmad Amir with the Van-ber team.",
+      alt: "Ahmad Amir with the Van‑ber team.",
       width: 1024,
       height: 702,
       position: "28% center",
-      title: "Van-ber Preparation",
-      detail: "With the Van-ber team before presenting.",
+      title: "Van‑ber Preparation",
+      detail: "With the Van‑ber team before presenting.",
     },
     {
       src: "/images/gallery/12-discussion.webp",
