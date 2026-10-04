@@ -13,9 +13,10 @@ export function Ventures() {
   return (
     <section className="section" id="ventures" aria-labelledby="ventures-heading">
       <Reveal className="wrap">
-        <h2 id="ventures-heading" className="section-title">
+        <h2 id="ventures-heading" className="section-title ventures-heading">
           {ventures.heading}
         </h2>
+        <p className="section-line ventures-line">{ventures.line}</p>
         <div className="venture-list">
           {ventures.items.map((venture, index) => (
             <article className="venture" key={venture.name}>

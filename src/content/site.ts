@@ -52,6 +52,12 @@ export const hero = {
     height: 979,
   } satisfies Photo,
   cta: "Let's Connect",
+  metrics: [
+    { value: "8", label: "Businesses" },
+    { value: "4", label: "Areas of work" },
+    { value: "3", label: "Consumer brands" },
+    { value: "2022", label: "Where it started" },
+  ],
 };
 
 /** Official venture marks along the bottom of the hero. Heights keep them visually even. */
@@ -82,13 +88,25 @@ export const about = {
 };
 
 export const areas = {
-  heading: "What I Do",
-  line: "Sourcing, manufacturing, technology, and consumer brands.",
+  heading: "The work",
+  line: "Clothes to wear, products from China, a way around Hong Kong, and things for everyday life.",
   items: [
-    { title: "Sourcing", line: "Products, suppliers, and markets." },
-    { title: "Manufacturing", line: "Apparel, production, and supply." },
-    { title: "Technology", line: "Ideas turned into products." },
-    { title: "Brands", line: "Consumer products and new opportunities." },
+    {
+      title: "AFJA Trading and F&A Sourcing",
+      line: "Clothes, made and sourced for the people who wear them.",
+    },
+    {
+      title: "Direct AJ Sourcing",
+      line: "Products from China, for wherever people need them.",
+    },
+    {
+      title: "Van-ber",
+      line: "A way around Hong Kong when local transport leaves a gap.",
+    },
+    {
+      title: "The Bare Edit, Protect It, and Pause It",
+      line: "Everyday jewellery, care for the car, and a pause on discomfort.",
+    },
   ],
 };
 
@@ -102,6 +120,7 @@ export type Venture = {
 
 export const ventures = {
   heading: "Businesses & Ventures",
+  line: "The companies and brands I work on.",
   items: [
     {
       name: "Direct AJ Sourcing Limited",
@@ -123,8 +142,9 @@ export const ventures = {
       summary: "Garments manufacturing and apparel sourcing.",
     },
     {
-      name: "Vanber",
+      name: "Van-ber",
       role: "Founder",
+      year: "2025",
       summary:
         "A technology venture I developed around a gap in local transportation in Hong Kong.",
     },
@@ -161,6 +181,7 @@ export const ventures = {
 
 export const journey = {
   heading: "The Journey",
+  line: "From manufacturing and sourcing, through Van-ber, into new brands.",
   chapters: [
     {
       index: "01",
@@ -178,11 +199,11 @@ export const journey = {
     },
     {
       index: "02",
-      marker: "Vanber",
+      marker: "2025",
       title: "Exploring Technology",
       body: [
         { text: "I later explored technology through " },
-        { text: "Vanber", emphasis: true },
+        { text: "Van-ber", emphasis: true },
         {
           text: ", developing an app around a gap in local transportation in Hong Kong.",
         },
@@ -213,14 +234,15 @@ export const journey = {
 
 export const milestones = {
   heading: "Recognition & Milestones",
+  line: "Selected for CUPP, and the Grand Award for Mascot Design.",
   cupp: {
     title: "CUPP",
     programme: "Cyberport University Partnership Programme",
     meta: "Selected · Hong Kong → London",
-    body: "I was selected from companies across Hong Kong to participate in CUPP, travelling to London for the bootcamp and presenting Vanber to investors.",
+    body: "I was selected from companies across Hong Kong to participate in CUPP, travelling to London for the bootcamp and presenting Van-ber to investors.",
     image: {
       src: "/images/gallery/09-vanber-front.webp",
-      alt: "Ahmad Amir presenting Vanber at CUPP.",
+      alt: "Ahmad Amir presenting Van-ber at CUPP.",
       width: 1024,
       height: 768,
     } satisfies Photo,
@@ -240,6 +262,7 @@ export const milestones = {
 
 export const gallery = {
   heading: "Gallery",
+  line: "Photographs from CUPP, Van-ber, and the mascot award.",
   cards: [
     {
       src: "/images/gallery/17-stage.webp",
@@ -251,13 +274,22 @@ export const gallery = {
       detail: "On stage at CUPP 2026.",
     },
     {
+      src: "/images/gallery/05-speaking.webp",
+      alt: "Ahmad Amir speaking on stage at CUPP.",
+      width: 1024,
+      height: 683,
+      position: "62% 30%",
+      title: "Speaking at CUPP",
+      detail: "Speaking during a CUPP session.",
+    },
+    {
       src: "/images/gallery/14-vanber-slide.webp",
-      alt: "Ahmad Amir presenting the Vanber passenger screen.",
+      alt: "Ahmad Amir presenting the Van-ber passenger screen.",
       width: 1024,
       height: 768,
       position: "18% 58%",
-      title: "Presenting Vanber",
-      detail: "Walking through Vanber in a CUPP session.",
+      title: "Presenting Van-ber",
+      detail: "Walking through Van-ber in a CUPP session.",
     },
     {
       src: "/images/gallery/08-mascot-award.webp",
@@ -269,12 +301,21 @@ export const gallery = {
     },
     {
       src: "/images/gallery/07-vanber-team.webp",
-      alt: "Ahmad Amir with the Vanber team.",
+      alt: "Ahmad Amir with the Van-ber team.",
       width: 1024,
       height: 702,
       position: "28% center",
-      title: "Vanber Preparation",
-      detail: "With the Vanber team before presenting.",
+      title: "Van-ber Preparation",
+      detail: "With the Van-ber team before presenting.",
+    },
+    {
+      src: "/images/gallery/12-discussion.webp",
+      alt: "Ahmad Amir in discussion with the team.",
+      width: 1024,
+      height: 683,
+      position: "center 40%",
+      title: "In Discussion",
+      detail: "Talking with the team during CUPP.",
     },
     {
       src: "/images/gallery/13-cupp-opening.webp",
@@ -283,6 +324,15 @@ export const gallery = {
       height: 683,
       title: "CUPP Opening",
       detail: "Cyberport University Partnership Programme 2026.",
+    },
+    {
+      src: "/images/gallery/02-cupp-room.webp",
+      alt: "Ahmad Amir presenting in the CUPP room.",
+      width: 1024,
+      height: 768,
+      position: "70% 42%",
+      title: "CUPP Room",
+      detail: "Presenting during a CUPP session.",
     },
   ],
 };

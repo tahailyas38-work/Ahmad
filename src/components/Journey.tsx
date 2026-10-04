@@ -6,9 +6,10 @@ export function Journey() {
   return (
     <section className="section" id="journey" aria-labelledby="journey-heading">
       <Reveal className="wrap">
-        <h2 id="journey-heading" className="section-title">
+        <h2 id="journey-heading" className="section-title journey-heading">
           {journey.heading}
         </h2>
+        <p className="section-line journey-line">{journey.line}</p>
         <div className="chapter-list">
           {journey.chapters.map((chapter) => (
             <article className="chapter" key={chapter.index}>

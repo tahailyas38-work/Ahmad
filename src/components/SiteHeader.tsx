@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { hero, navigation, person } from "../content/site";
+import { navigation, person } from "../content/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -99,16 +99,6 @@ export function SiteHeader() {
     <header className={scrolled ? "site-header is-scrolled" : "site-header"} id="top">
       <nav className="nav-bar" aria-label="Primary">
         <a className="brand" href="#top">
-          {hero.portrait ? (
-            <span className="brand-photo">
-              <img
-                src={hero.portrait.src}
-                alt=""
-                width={hero.portrait.width}
-                height={hero.portrait.height}
-              />
-            </span>
-          ) : null}
           {person.fullName}
         </a>
         <div className="nav-links">
