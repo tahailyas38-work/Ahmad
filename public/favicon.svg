@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" fill="#090908"/>
-  <path fill="#E0B15A" fill-rule="evenodd" d="M16 5.2 24.4 25.8h3.4v1.7h-6.6v-1.7h1.2L20.6 21H11.4l-1.8 4.8h1.2v1.7H4.2v-1.7h3.4L16 5.2zm0 6.4-2.2 6.1h4.4L16 11.6z"/>
+  <path
+    d="M7.2 26.2 16 7.4 24.8 26.2M10.7 18.6h10.6"
+    fill="none"
+    stroke="#E0B15A"
+    stroke-width="2.4"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
 </svg>

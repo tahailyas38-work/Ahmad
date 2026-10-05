@@ -117,7 +117,7 @@ export function SiteHeader() {
           href="#connect"
           aria-current={current === "connect" ? "true" : undefined}
         >
-          Let's Connect
+          Connect
         </a>
         <button
           ref={buttonRef}
@@ -148,7 +148,7 @@ export function SiteHeader() {
           </a>
         ))}
         <a href="#connect" onClick={close}>
-          Let's Connect
+          Connect
         </a>
       </div>
     </header>

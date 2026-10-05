@@ -8,7 +8,6 @@ function markStyle(scale: number | undefined): CSSProperties {
 export function BrandStrip() {
   return (
     <div className="brand-band">
-      <h3 className="brand-heading">The brands</h3>
       <div className="brand-strip" aria-label="The brands">
       <ul className="brand-track">
         {brandMarks.map((mark) => (

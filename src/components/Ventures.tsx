@@ -9,38 +9,49 @@ function siteLabel(href: string) {
   return href.replace(/^https?:\/\/(?:www\.)?/, "").replace(/\/$/, "");
 }
 
-export function Ventures() {
+function VentureLink({ venture }: { venture: Venture }) {
+  if (!venture.href) return null;
   return (
-    <section className="section" id="ventures" aria-labelledby="ventures-heading">
+    <a className="venture-site" href={venture.href} target="_blank" rel="noreferrer noopener">
+      {siteLabel(venture.href)}
+    </a>
+  );
+}
+
+export function Ventures() {
+  const featured = ventures.items.filter((item) => item.featured);
+  const rest = ventures.items.filter((item) => !item.featured);
+
+  return (
+    <section className="section ventures" id="ventures" aria-labelledby="ventures-heading">
       <Reveal className="wrap">
-        <h2 id="ventures-heading" className="section-title ventures-heading">
-          {ventures.heading}
-        </h2>
-        <p className="section-line ventures-line">{ventures.line}</p>
-        <div className="venture-list">
-          {ventures.items.map((venture, index) => (
-            <article className="venture" key={venture.name}>
-              <p className="venture-index">{String(index + 1).padStart(2, "0")}</p>
+        <p className="eyebrow">Portfolio</p>
+        <h2 id="ventures-heading">{ventures.heading}</h2>
+        <p className="section-line">{ventures.line}</p>
+      </Reveal>
+      <Reveal className="wrap venture-featured">
+        {featured.map((venture) => (
+          <article className="venture-lead" key={venture.name}>
+            <p className="venture-group">{venture.group}</p>
+            <h3>{venture.name}</h3>
+            <p className="venture-meta">{meta(venture)}</p>
+            <p className="venture-summary">{venture.summary}</p>
+            <VentureLink venture={venture} />
+          </article>
+        ))}
+      </Reveal>
+      <Reveal className="wrap venture-list">
+        {rest.map((venture) => (
+          <article className="venture" key={venture.name}>
+            <p className="venture-group">{venture.group}</p>
+            <div className="venture-main">
               <h3>{venture.name}</h3>
-              <div className="venture-detail">
-                <p className="venture-meta">{meta(venture)}</p>
-                <p className="venture-summary">{venture.summary}</p>
-              </div>
-              {venture.href ? (
-                <a
-                  className="venture-site"
-                  href={venture.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  {siteLabel(venture.href)}
-                </a>
-              ) : (
-                <span className="venture-site" />
-              )}
-            </article>
-          ))}
-        </div>
+              <p className="venture-meta">{meta(venture)}</p>
+            </div>
+            <p className="venture-summary">{venture.summary}</p>
+            <VentureLink venture={venture} />
+          </article>
+        ))}
       </Reveal>
     </section>
   );
