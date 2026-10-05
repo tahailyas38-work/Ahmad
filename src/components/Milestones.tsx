@@ -79,9 +79,6 @@ export function Milestones() {
                   <article className="milestone-slide" key={item.index}>
                     <p className="milestone-index">{item.index}</p>
                     <h3>{item.title}</h3>
-                    {"programme" in item && item.programme ? (
-                      <p className="milestone-programme">{item.programme}</p>
-                    ) : null}
                     <p className="milestone-body">{item.body}</p>
                     <figure className="milestone-inline">
                       <img

@@ -13,7 +13,7 @@ export function BrandStrip() {
       <ul className="brand-track">
         {brandMarks.map((mark) => (
           <li key={mark.name}>
-            {mark.href ? (
+            {("href" in mark && mark.href) ? (
               <a href={mark.href} target="_blank" rel="noreferrer noopener">
                 <img src={mark.src} alt={mark.name} style={markStyle("scale" in mark ? mark.scale : undefined)} />
               </a>
