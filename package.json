@@ -12,7 +12,10 @@
     "@fontsource-variable/fraunces": "^5.2.8",
     "@fontsource-variable/manrope": "^5.3.0",
     "@fontsource/allison": "^5.3.0",
+    "@fontsource/rem": "^5.3.0",
     "@fontsource/source-serif-4": "^5.3.0",
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0",
     "lucide-react": "^0.511.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"

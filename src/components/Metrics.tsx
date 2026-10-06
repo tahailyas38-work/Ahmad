@@ -1,17 +1,16 @@
 import { metrics } from "../content/site";
-import { Reveal } from "./Reveal";
 
 export function Metrics() {
   return (
-    <section className="metric-band" aria-label="Overview">
-      <Reveal className="wrap metric-grid">
+    <section className="metrics" aria-label="Overview">
+      <div className="shell metric-row">
         {metrics.map((metric) => (
-          <article key={metric.label} className="metric-card">
-            <p className="metric-value">{metric.value}</p>
-            <p className="metric-label">{metric.label}</p>
+          <article key={metric.label}>
+            <strong>{metric.word}</strong>
+            <p>{metric.label}</p>
           </article>
         ))}
-      </Reveal>
+      </div>
     </section>
   );
 }

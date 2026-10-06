@@ -4,8 +4,8 @@
  * Photographs live in /public/images. To swap one, replace the file
  * and keep `src`, `width`, `height`, and `alt` in step with it.
  *
- * Email, phone, and WeChat stay blank until the real details are known.
- * Use mailto: for email and tel: for phone. WeChat can be a profile URL.
+ * Email stays blank until the real address is known.
+ * Use mailto: for email.
  */
 
 export type TextRun = {
@@ -22,7 +22,7 @@ export type Photo = {
   position?: string;
 };
 
-export type ConnectIcon = "email" | "phone" | "wechat";
+export type ConnectIcon = "email";
 
 export type ConnectChannel = {
   label: string;
@@ -36,91 +36,101 @@ export const person = {
 
 export const navigation = [
   { id: "about", label: "About" },
-  { id: "journey", label: "Journey" },
+  { id: "work", label: "Work" },
   { id: "ventures", label: "Ventures" },
   { id: "milestones", label: "Recognition" },
 ] as const;
 
 export const hero = {
-  heading: person.fullName,
-  role: "Director · Founder · Business Builder",
-  line: "Working across sourcing, manufacturing, technology, and consumer brands through a growing portfolio of ventures.",
-  cta: "Connect",
+  focus: "Focus",
+  goal: "Goal",
+  heading: "Entrepreneur",
+  line: "I work across sourcing, manufacturing, technology, consumer brands, real estate investments, and stocks and commodities.",
+  cta: "Connect via Email",
   image: {
-    src: "/images/gallery/09-vanber-front.webp",
-    alt: "Ahmad Amir presenting Van‑ber at CUPP.",
+    src: "/images/hero-stage.jpg",
+    alt: "Ahmad Amir speaking on stage.",
     width: 1024,
-    height: 768,
-    position: "center 18%",
+    height: 654,
   } satisfies Photo,
-  caption: "Presenting Van‑ber at CUPP.",
 };
 
 /** Figures that can be read from the businesses and programmes already listed on this page. */
 export const metrics = [
-  { value: "8", label: "Ventures" },
-  { value: "4", label: "Industries" },
-  { value: "Hong Kong", label: "Experience" },
-  { value: "London", label: "Programme" },
+  {
+    word: "6+",
+    label: "Areas of Work",
+  },
+  {
+    word: "9+",
+    label: "Ventures",
+  },
 ] as const;
 
 /** Lines already used on the page, set as a quote block. */
 export const quotes = {
-  label: "In his words",
-  name: person.fullName,
-  lines: [
-    "I like exploring new opportunities and building things from the ground up.",
-    "My work today spans sourcing, manufacturing, technology, and consumer brands.",
-  ],
-} as const;
+  heading: person.fullName,
+  role: "Entrepreneur",
+  line: "I like exploring new opportunities and building things from the ground up.",
+  image: {
+    src: "/images/quote-business.jpg",
+    alt: "",
+    width: 1280,
+    height: 720,
+    position: "center",
+  } satisfies Photo,
+  portrait: {
+    src: "/images/dummy/hero.jpg",
+    alt: "",
+    width: 1920,
+    height: 1080,
+    position: "68% 12%",
+  } satisfies Photo,
+};
 
-/** Official venture marks along the bottom of the hero. Heights keep them visually even. */
-/** Email, phone, and WeChat hrefs stay empty until the real details are supplied. */
+/** Email href stays empty until the real address is supplied. */
 export const connectChannels: ConnectChannel[] = [
   { label: "Email", href: "", icon: "email" },
-  { label: "Phone", href: "", icon: "phone" },
-  { label: "WeChat", href: "", icon: "wechat" },
 ];
 
-export const brands = [
-  { name: "The Bare Edit", href: "https://www.thebareedit.pk/" },
-  { name: "Protect It", href: "https://www.protectit.pk/" },
-  { name: "Pause It", href: "https://pauseit.pk/" },
-  { name: "AFJA Trading", href: "https://www.afjatrading.com/" },
-] as const;
-
-export const brandMarks = [
-  { name: "AFJA Trading", src: "/logos/afja.svg", href: "https://www.afjatrading.com/" },
-  { name: "F&A Sourcing", src: "/logos/fa.svg" },
-  { name: "Van‑ber", src: "/logos/vanber.svg", scale: 1.35 },
-  { name: "Direct AJ Sourcing", src: "/logos/aj.svg", scale: 1.35 },
-  { name: "The Bare Edit", src: "/logos/bare-edit.svg", href: "https://www.thebareedit.pk/", scale: 1.05 },
-  { name: "Pause It", src: "/logos/pause-it.svg", href: "https://pauseit.pk/", scale: 0.62 },
-] as const;
-
 export const about = {
-  heading: "About",
-  lead: "Ahmad Amir works across sourcing, manufacturing, technology, and consumer brands, building practical businesses around opportunities worth pursuing.",
-  areas: [
+  heading: "About Me",
+  body: "I build and direct companies, and I am also active in real estate investments and stocks and commodities. I have experience in Hong Kong, and was selected to participate in CUPP and present Van‑ber during the London programme. I like exploring new opportunities and building things from the ground up.",
+};
+
+export const work = {
+  heading: "My Work",
+  line: "Sourcing, manufacturing, technology, consumer brands, real estate investments, and stocks and commodities.",
+  items: [
     {
-      index: "01",
+      icon: "plane",
       label: "Sourcing",
-      text: "Products from China through Direct AJ Sourcing Limited.",
+      text: "I source products from China to anywhere in the world through AJ Sourcing Limited.",
     },
     {
-      index: "02",
+      icon: "factory",
       label: "Manufacturing",
-      text: "Garments through AFJA Trading Limited and F&A Sourcing Limited.",
+      text: "I manufacture garments through AFJA Trading Limited and F&A Sourcing Limited.",
     },
     {
-      index: "03",
+      icon: "cpu",
       label: "Technology",
-      text: "Van‑ber, developed around a transportation gap in Hong Kong.",
+      text: "I developed Van‑ber around a transportation gap in Hong Kong.",
     },
     {
-      index: "04",
+      icon: "cart",
       label: "Consumer brands",
-      text: "The Bare Edit, Protect It, and Pause It.",
+      text: "I direct The Bare Edit, Protect It, and Pause It.",
+    },
+    {
+      icon: "building",
+      label: "Real estate investments",
+      text: "I am active in real estate investments.",
+    },
+    {
+      icon: "trend",
+      label: "Stocks & commodities",
+      text: "I am active in stocks and commodities.",
     },
   ],
 };
@@ -129,7 +139,7 @@ export const areas = {
   kicker: "The work",
   heading: ["From clothes", "to everyday brands"],
   lead: "Clothes to wear, products from China, a way around Hong Kong, and things for everyday life.",
-  body: "AFJA Trading and F&A Sourcing make and source clothes for the people who wear them. Direct AJ Sourcing brings products from China to wherever people need them. Van‑ber is a way around Hong Kong when local transport leaves a gap. The Bare Edit, Protect It, and Pause It cover everyday jewellery, care for the car, and a pause on discomfort.",
+  body: "AFJA Trading and F&A Sourcing make and source clothes for the people who wear them. AJ Sourcing brings products from China to wherever people need them. Van‑ber is a way around Hong Kong when local transport leaves a gap. The Bare Edit, Protect It, and Pause It cover everyday jewellery, care for the car, and a pause on discomfort.",
   cta: { href: "#ventures", label: "See the businesses" },
   image: {
     src: "/images/gallery/09-vanber-front.webp",
@@ -143,24 +153,16 @@ export type Venture = {
   name: string;
   role: string;
   year?: string;
-  group: "Manufacturing" | "Sourcing" | "Technology" | "Consumer" | "Parent";
-  summary: string;
+  group: "Manufacturing" | "Sourcing" | "Technology" | "Consumer" | "Parent" | "Investment";
+  summary?: string;
   href?: string;
   featured?: boolean;
 };
 
 export const ventures = {
-  heading: "Businesses & Ventures",
-  line: "Companies and brands across manufacturing, sourcing, technology, and consumer markets.",
+  heading: "My Businesses & Ventures",
+  line: "Companies I direct or founded, an investment, and the parent behind the ecommerce brands.",
   items: [
-    {
-      name: "Direct AJ Sourcing Limited",
-      role: "Director",
-      year: "2026",
-      group: "Sourcing",
-      featured: true,
-      summary: "Sourcing products from China to anywhere in the world.",
-    },
     {
       name: "AFJA Trading Limited",
       role: "Director",
@@ -181,8 +183,28 @@ export const ventures = {
       role: "Founder",
       year: "2025",
       group: "Technology",
-      featured: true,
       summary: "A technology venture developed around a gap in local transportation in Hong Kong.",
+    },
+    {
+      name: "Phantom Imports",
+      role: "Investor",
+      year: "2024",
+      group: "Investment",
+      summary: "Imports cars from Japan and sells them in Pakistan.",
+    },
+    {
+      name: "IT Traders Pakistan",
+      role: "Director",
+      year: "2026",
+      group: "Parent",
+      summary: "The parent company behind the ecommerce businesses.",
+    },
+    {
+      name: "AJ Sourcing Limited",
+      role: "Director",
+      year: "2026",
+      group: "Sourcing",
+      summary: "Sourcing products from China to anywhere in the world.",
     },
     {
       name: "The Bare Edit",
@@ -208,60 +230,60 @@ export const ventures = {
       summary: "Products designed to help pause everyday discomfort.",
       href: "https://pauseit.pk/",
     },
-    {
-      name: "IT Traders Pakistan",
-      role: "Director",
-      year: "2026",
-      group: "Parent",
-      featured: true,
-      summary: "The parent company behind these business activities.",
-    },
   ] satisfies Venture[],
 };
 
 export const journey = {
-  heading: "The Journey",
-  line: "How the work moved from manufacturing into technology and new ventures.",
+  heading: "My Journey",
+  line: "From manufacturing and sourcing, through Van‑ber, into new brands.",
+  image: {
+    src: "/images/journey.jpg",
+    alt: "",
+    width: 864,
+    height: 1152,
+    position: "center",
+  } satisfies Photo,
   chapters: [
     {
-      index: "01",
+      index: "1",
       title: "Manufacturing & Sourcing",
-      names: ["AFJA Trading Limited", "F&A Sourcing Limited"],
+      text: "Started in garments manufacturing and apparel sourcing.",
     },
     {
-      index: "02",
-      title: "Technology",
-      note: "Developed around a transportation gap in Hong Kong.",
-      names: ["Van‑ber"],
+      index: "2",
+      title: "Exploring Technology",
+      text: "Expanded into technology with Van‑ber in Hong Kong.",
     },
     {
-      index: "03",
-      title: "Expanding Into New Ventures",
-      names: [
-        "Direct AJ Sourcing Limited",
-        "The Bare Edit",
-        "Protect It",
-        "Pause It",
-        "IT Traders Pakistan",
-      ],
+      index: "3",
+      title: "Building Across Opportunities",
+      text: "Expanded into sourcing, consumer brands, and investments.",
     },
   ],
 };
 
 export const milestones = {
-  heading: "Recognition & Milestones",
-  items: [
+  heading: "CUPP Milestone",
+  line: "I was selected through the Cyberport University Partnership Programme (CUPP) to attend the London bootcamp and present Van‑ber to investors and industry professionals.",
+  image: {
+    src: "/images/cupp.jpg",
+    alt: "Ahmad Amir at the Cyberport University Partnership Programme 2026 Graduation Ceremony.",
+    width: 1024,
+    height: 682,
+    position: "center 42%",
+  } satisfies Photo,
+  highlights: [
     {
-      kicker: "CUPP",
       title: "Cyberport University Partnership Programme",
-      meta: "Selected · Hong Kong → London",
-      body: "Selected to participate in CUPP and present Van‑ber during the London programme.",
+      text: "I participated in one of Hong Kong's leading entrepreneurship programmes.",
     },
     {
-      kicker: "Award",
-      title: "Mascot Design Competition",
-      meta: "Grand Award",
-      body: "Won a Mascot Design Competition at Hong Kong Baptist University.",
+      title: "London Bootcamp",
+      text: "I travelled to London as part of the programme.",
+    },
+    {
+      title: "Investor Presentation",
+      text: "I presented the Van‑ber concept to investors and industry professionals.",
     },
   ],
 };
@@ -344,8 +366,9 @@ export const gallery = {
 };
 
 export const contact = {
-  heading: "Connect",
+  heading: "Let's Connect",
   line: "For business, sourcing, manufacturing, or partnership conversations.",
-  cta: "Connect on WeChat",
+  cta: "Connect via Email",
   signoff: person.fullName,
+  legal: "© 2026 All rights reserved.",
 };

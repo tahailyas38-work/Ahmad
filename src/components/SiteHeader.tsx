@@ -13,8 +13,12 @@ export function SiteHeader() {
     let frame = 0;
 
     const update = () => {
-      setScrolled(window.scrollY > 8);
-      const line = window.scrollY + 96;
+      setScrolled(() => {
+        const hero = document.querySelector(".hero");
+        if (!hero) return window.scrollY > 0;
+        return hero.getBoundingClientRect().bottom <= 0;
+      });
+      const line = window.scrollY + Math.round(window.innerHeight * 0.4);
       let active = "";
       const items = [...navigation.map((item) => item.id), "connect"];
       for (const id of items) {
@@ -96,29 +100,36 @@ export function SiteHeader() {
   const close = () => setOpen(false);
 
   return (
-    <header className={scrolled ? "site-header is-scrolled" : "site-header"} id="top">
+    <header
+      className={["site-header", scrolled ? "is-scrolled" : "", open ? "is-open" : ""]
+        .filter(Boolean)
+        .join(" ")}
+      id="top"
+    >
       <nav className="nav-bar" aria-label="Primary">
         <a className="brand" href="#top">
           {person.fullName}
         </a>
-        <div className="nav-links">
-          {navigation.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              aria-current={current === item.id ? "true" : undefined}
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="nav-end">
+          <div className="nav-links">
+            {navigation.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                aria-current={current === item.id ? "true" : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <a
+            className="nav-cta"
+            href="#connect"
+            aria-current={current === "connect" ? "true" : undefined}
+          >
+            Connect via Email
+          </a>
         </div>
-        <a
-          className="nav-cta"
-          href="#connect"
-          aria-current={current === "connect" ? "true" : undefined}
-        >
-          Connect
-        </a>
         <button
           ref={buttonRef}
           className="menu-toggle"
@@ -147,8 +158,8 @@ export function SiteHeader() {
             {item.label}
           </a>
         ))}
-        <a href="#connect" onClick={close}>
-          Connect
+        <a className="nav-cta" href="#connect" onClick={close}>
+          Connect via Email
         </a>
       </div>
     </header>

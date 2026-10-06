@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#090908"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="A">
+  <rect width="32" height="32" rx="6" fill="#1a1a1a"/>
   <path
-    d="M7.2 26.2 16 7.4 24.8 26.2M10.7 18.6h10.6"
-    fill="none"
-    stroke="#E0B15A"
-    stroke-width="2.4"
-    stroke-linecap="square"
-    stroke-linejoin="miter"
+    fill="#fff"
+    transform="translate(16 16.2) scale(0.01435 -0.01435) translate(-609 -720)"
+    d="M40 0 564 1440H654L1178 0H1088L578 1402H638L130 0ZM240 374V454H976V374Z"
   />
 </svg>
