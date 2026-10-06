@@ -80,11 +80,11 @@ export const quotes = {
     position: "center",
   } satisfies Photo,
   portrait: {
-    src: "/images/dummy/hero.jpg",
-    alt: "",
-    width: 1920,
-    height: 1080,
-    position: "68% 12%",
+    src: "/images/hero-stage.jpg",
+    alt: "Ahmad Amir.",
+    width: 1024,
+    height: 654,
+    position: "50% 16%",
   } satisfies Photo,
 };
 

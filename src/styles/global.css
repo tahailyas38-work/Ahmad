@@ -1137,6 +1137,7 @@ html.js .reveal.is-in {
     margin-bottom: 0;
     width: 100%;
     text-align: center;
+    top: -20px;
   }
 
   .hero-kicker {
@@ -1148,8 +1149,9 @@ html.js .reveal.is-in {
   .hero-aside {
     order: 2;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     gap: 24px;
+    top: -20px;
   }
 
   .hero-stats {
@@ -1226,6 +1228,17 @@ html.js .reveal.is-in {
     border-top: 0;
   }
 
+  .work .section-intro {
+    max-width: none;
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .work-grid li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .mile-split ol {
     min-height: 0;
   }
@@ -1264,6 +1277,15 @@ html.js .reveal.is-in {
     font-size: clamp(1.7rem, 6vw, 44px);
   }
 
+  .venture-copy h2 br {
+    display: none;
+  }
+
+  .venture-layout h2 {
+    font-size: clamp(1.25rem, 6.7vw, 44px);
+    white-space: nowrap;
+  }
+
   .milestones {
     padding: clamp(4.5rem, 8vw, 120px) 0;
   }
@@ -1294,6 +1316,8 @@ html.js .reveal.is-in {
 
   .work-grid li {
     border-right: 1px solid var(--line);
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 
   .work-grid li:nth-child(2n) {

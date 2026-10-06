@@ -16,9 +16,9 @@ export function Quotes() {
         <footer>
           <img
             src={quotes.portrait.src}
-            alt="Ahmad Amir."
-            width={80}
-            height={80}
+            alt={quotes.portrait.alt}
+            width={quotes.portrait.width}
+            height={quotes.portrait.height}
             style={
               quotes.portrait.position
                 ? { objectPosition: quotes.portrait.position }

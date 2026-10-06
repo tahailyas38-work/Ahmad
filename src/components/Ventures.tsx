@@ -7,7 +7,7 @@ export function Ventures() {
       <div className="shell venture-layout">
         <header className="venture-copy">
           <h2 id="ventures-heading">
-            My Businesses
+            My Businesses{" "}
             <br />
             &amp; Ventures
           </h2>
